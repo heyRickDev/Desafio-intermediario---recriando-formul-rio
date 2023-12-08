@@ -19,16 +19,18 @@
         <p>Preencha o formulário abaixo para agendar a sua mentoria</p>
       </header>
       <form>
-        <div class="fieldset-wrapper">
-          <fieldset>
+        <fieldset>
+          <div class="fieldset-wrapper">
             <legend>Informações Pessoais</legend>
-            <div class="input-wrapper">
-              <label for="msname">Nome</label>
-              <input type="text" id="msname" />
-            </div>
-            <div class="input-wrapper">
-              <label for="mssurname">Sobrenome</label>
-              <input type="text" id="mssurname" />
+            <div id="namesurname-wrapper">
+              <div class="input-wrapper">
+                <label for="msname">Nome</label>
+                <input type="text" id="msname" />
+              </div>
+              <div class="input-wrapper">
+                <label for="mssurname">Sobrenome</label>
+                <input type="text" id="mssurname" />
+              </div>
             </div>
             <div class="input-wrapper">
               <label for="msemail"
@@ -37,11 +39,59 @@
               <input type="email" id="msemail" />
             </div>
             <div class="input-wrapper">
-              <label for="mspassword">Senha</label>
+              <label for="mspassword"
+                >Senha <span>(mínimo de 6 caracteres)</span></label
+              >
               <input type="password" id="mspassword" />
             </div>
-          </fieldset>
-        </div>
+          </div>
+        </fieldset>
+        <fieldset>
+          <div class="fieldset-wrapper">
+            <legend>Informações do Mentor</legend>
+            <div class="input-wrapper">
+              <label for="mentorname"
+                >Email <span>(Só o primeiro nome)</span></label
+              >
+              <input type="text" id="mentorname" />
+            </div>
+          </div>
+        </fieldset>
+        <fieldset>
+          <div class="fieldset-wrapper">
+            <legend>Seus horários disponíveis</legend>
+            <h2>Primeira mentoria</h2>
+            <div class="schedule">
+              <div class="input-wrapper">
+                <label for="msdate">Data <span>(DD/MM/AAAA)</span></label>
+                <input type="date" id="msdate" />
+              </div>
+              <div class="input-wrapper">
+                <label for="msdate">Das</label>
+                <input type="time" id="msbegin" />
+              </div>
+              <div class="input-wrapper">
+                <label for="msdate">Até</label>
+                <input type="time" id="msend" />
+              </div>
+            </div>
+            <h2>Segunda mentoria</h2>
+            <div class="schedule">
+              <div class="input-wrapper">
+                <label for="msdate2">Data <span>(DD/MM/AAAA)</span></label>
+                <input type="date" id="msdate2" />
+              </div>
+              <div class="input-wrapper">
+                <label for="msbegin2">Das</label>
+                <input type="time" id="msbegin2" />
+              </div>
+              <div class="input-wrapper">
+                <label for="msend2">Até</label>
+                <input type="time" id="msend2" />
+              </div>
+            </div>
+          </div>
+        </fieldset>
       </form>
     </div>
   </body>
