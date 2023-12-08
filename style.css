@@ -20,9 +20,14 @@ body::before {
   width: 750px;
   margin: 0 auto;
 }
+header h1,
+fieldset legend,
+.fieldset-wrapper h2,
+footer input {
+  font-family: "Staatliches", sans-serif;
+}
 header h1 {
   color: #fff;
-  font-family: "Staatliches", sans-serif;
   font-size: 48px;
   font-weight: 400;
   padding-top: 140px;
@@ -33,7 +38,9 @@ header p {
   margin-bottom: 58px;
 }
 form {
-  /* display: flex; */
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
   width: 750px;
   background: #fff;
   border-radius: 20px 20px 0 0;
@@ -46,11 +53,9 @@ fieldset {
 .fieldset-wrapper {
   display: flex;
   flex-direction: column;
-  gap: 16px;
 }
 fieldset legend {
   color: #535971;
-  font-family: "Staatliches", sans-serif;
   font-size: 24px;
   font-weight: 400;
   line-height: 34px;
@@ -85,10 +90,12 @@ fieldset legend {
   line-height: 20px;
   margin-left: 6px;
 }
+.input-wrapper label span:hover {
+  color: #77757e;
+}
 .input-wrapper input {
   width: 100%;
   height: 56px;
-  align-items: center;
   border: 1px solid #e6e6f0;
   border-radius: 8px;
   margin-bottom: 16px;
@@ -97,7 +104,6 @@ fieldset legend {
 }
 .fieldset-wrapper h2 {
   color: #535971;
-  font-family: "Staatliches", sans-serif;
   font-size: 20px;
   font-weight: 400;
   line-height: 34px;
@@ -109,4 +115,34 @@ fieldset legend {
 }
 .schedule > div:nth-child(1) {
   width: 100%;
+}
+#msdate2,
+#msbegin2,
+#msend2 {
+  margin: 0;
+}
+footer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 160px;
+  padding: 52px 71px;
+  background: #535971;
+  border-radius: 0 0 20px 20px;
+  margin-bottom: 366px;
+}
+footer input {
+  height: 55px;
+  border: none;
+  border-radius: 20px;
+  background: #ff5374;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 26px;
+  transition: 0.4s;
+}
+footer input:hover {
+  cursor: pointer;
+  color: #ffd700;
 }
